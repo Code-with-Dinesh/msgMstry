@@ -3,7 +3,7 @@ import UserModel from "@/app/models/User";
 import { NextRequest, NextResponse } from "next/server";
 import bcrypt  from 'bcryptjs'
 import { SendVerificationEmail } from "@/app/helper/sendVerificationEmail";
-export async function Post(request:NextRequest) {
+export async function POST(request:NextRequest) {
     try {
         await connectDB()
         const Reqbody = await request.json()
