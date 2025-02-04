@@ -7,14 +7,14 @@ export default function Component() {
     return (
       <>
         Signed in as {session.user.email} <br />
-        <button onClick={() => signOut()}>Sign out</button>
+        <button className="p-4" onClick={() => signOut()}>Sign out</button>
       </>
     )
   }
   return (
-    <>
+    <div className="p-2">
       Not signed in <br />
-      <button className="bg-orange-500 px-3 py-1 rounded-lg" onClick={() => signIn()}>Sign in</button>
-    </>
+      <button className="bg-orange-500 px-3 mt-4 py-1 rounded-lg" onClick={() => signIn()}>Sign in</button>
+    </div>
   )
 }
