@@ -35,6 +35,7 @@ export async function GET(request:NextResponse) {
         return NextResponse.json({success:false,message:'Not Authorize user'},{status:400})
        }
        const userId = user?._id;
+       
        const foundUser = await UserModel.findOne({userId})
        if(!foundUser){
         return NextResponse.json({success:false,message:'User Not Found'},{status:404})

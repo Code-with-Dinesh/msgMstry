@@ -4,7 +4,7 @@ import bcrypt from 'bcryptjs'
 import connectDB from "@/app/lib/Dbconnect";
 import UserModel from "@/app/models/User";
 
-export const authOptions:NextAuthOptions ={
+export const authOptions:NextAuthOptions = {
     providers:[
         CredentialsProvider({
             id: "credentials",
